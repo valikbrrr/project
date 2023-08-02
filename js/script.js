@@ -521,91 +521,91 @@
 
 
 
-let numberOfFilms;
+// let numberOfFilms;
 
-function start() {
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// function start() {
+//     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-    while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-    }
-}
+//     while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+//     }
+// }
 
-start();
+// start();
 
 
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
-function rememberMyFilms() {
-    for (let i = 0; i < 2; i++) {
-        const a = prompt("Один из последних просмотренных фильмов?", ""),
-              b = prompt("На сколько оцените его?", "");
+// function rememberMyFilms() {
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt("Один из последних просмотренных фильмов?", ""),
+//               b = prompt("На сколько оцените его?", "");
     
-        if (a != null && b != null && a != "" && b != "" && a.length < 50) {
-            personalMovieDB.movies[a] = b;
-            console.log("done");
-        } else {
-            console.log("error");
-            i--;
-        }
-    }
-}
+//         if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+//             personalMovieDB.movies[a] = b;
+//             console.log("done");
+//         } else {
+//             console.log("error");
+//             i--;
+//         }
+//     }
+// }
 
-rememberMyFilms();
-
-
-for (let i = 0; i < 2; i++) {
-    const a = prompt("Один из последних просмотренных фильмов?", ""),
-          b = prompt("На сколько оцените его?", "");
-
-    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log("done");
-    } else {
-        console.log("error");
-        i--;
-    }
-} 
+// rememberMyFilms();
 
 
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt("Один из последних просмотренных фильмов?", ""),
+//           b = prompt("На сколько оцените его?", "");
 
-function detectPersonalLevel() {
-    if (personalMovieDB.count < 10) {
-        console.log("МАЛО");
-    } else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
-        console.log("classic");
-    } else if (personalMovieDB.count > 30) {
-        console.log("movieMan");
-    } else {
-        console.log("error");
-    }
-}
+//     if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log("done");
+//     } else {
+//         console.log("error");
+//         i--;
+//     }
+// } 
+
+
+
+// function detectPersonalLevel() {
+//     if (personalMovieDB.count < 10) {
+//         console.log("МАЛО");
+//     } else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 30) {
+//         console.log("classic");
+//     } else if (personalMovieDB.count > 30) {
+//         console.log("movieMan");
+//     } else {
+//         console.log("error");
+//     }
+// }
  
-detectPersonalLevel();
+// detectPersonalLevel();
 
-function showMyDB (hidden) {
-    if (!hidden) {
-        console.log(personalMovieDB);
-    }
-}
+// function showMyDB (hidden) {
+//     if (!hidden) {
+//         console.log(personalMovieDB);
+//     }
+// }
 
-showMyDB(personalMovieDB.privat);
+// showMyDB(personalMovieDB.privat);
 
 
-function writeYourGenres() {
-    for (let i = 1; i < 4; i++) {
-        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
-    }
-}
+// function writeYourGenres() {
+//     for (let i = 1; i < 4; i++) {
+//         personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+//     }
+// }
 
-writeYourGenres();
+// writeYourGenres();
 
 // console.log(personalMovieDB.count);
 
@@ -617,3 +617,239 @@ writeYourGenres();
 
 
 
+// function calculateVolumeAndArea(a) {
+//     if (typeof(a) !== "number" || a <= 0 || !Number.isInteger(a)) {
+//         console.log("При вычислении произошла ошибка");
+//         return "При вычислении произошла ошибка";
+//     } else {
+//     console.log(`Объём куба: ${a * a * a}, площадь всей поверхности: ${a * a * 6} `);
+//     return `Объём куба: ${a * a * a}, площадь всей поверхности: ${a * a * 6} `;
+//     }
+// }
+
+// calculateVolumeAndArea(5);
+
+
+// function getCoupeNumber(a) {
+//     if (typeof(a) !== "number" || a < 0 || !Number.isInteger(a)) {
+//      console.log("Ошибка. Проверьте правильность введенного номера места");
+//      return "Ошибка. Проверьте правильность введенного номера места"
+//     }
+//     if (a === 0 || a > 36) {
+//         console.log("Таких мест в вагоне не существует");
+//         return "Таких мест в вагоне не существует";
+//     }
+//     if (a > 0 && a <= 4) {
+//         console.log(1);
+//         return 1;
+//     }
+//     if (a > 4 && a <= 8) {
+//         console.log(2);
+//         return 2;
+//     }
+//     if (a > 8 && a <= 12) {
+//         console.log(3);
+//         return 3;
+//     }
+//     if (a > 12 && a <= 16) {
+//         console.log(4);
+//         return 4;
+//     }
+//     if (a > 16 && a <= 20) {
+//         console.log(5);
+//         return 5;
+//     }
+//     if (a > 20 && a <= 24) {
+//         console.log(6);
+//         return 6;
+//     }
+//     if (a > 24 && a <= 28) {
+//         console.log(7);
+//         return 7;
+//     }
+//     if (a > 28 && a <= 32) {
+//         console.log(8);
+//         return 8;
+//     }   
+//     if (a > 32 && a <= 36) {
+//         console.log(9);
+//         return 9;
+//     }
+// }
+
+// getCoupeNumber(-10);
+
+
+
+// ????????????????
+// function getCoupeNumber(number) {
+//     if (isNaN(number) || Math.trunc(number) !== number || number < 0) {
+//       return "Ошибка. Проверьте правильность введенного номера места";
+//     }
+   
+//     if (number === 0 || number > 36) {
+//       return "Таких мест в вагоне не существует";
+//     }
+   
+//     return Math.ceil(number / 4);
+//   }
+
+
+
+
+// function getTimeFromMinutes(minutes) {
+
+//     if (typeof(minutes) !== "number" || minutes < 0 || minutes > 600 || !Number.isInteger(minutes)) {
+//         console.log("Ошибка, проверьте данные");
+//         return "Ошибка, проверьте данные";
+//     }
+
+//     if (minutes >= 0 && minutes < 60) {
+//     console.log(`Это 0 часов и ${minutes} минут`);
+//     return `Это 0 часов и ${minutes} минут`;
+//     }
+
+//         if (minutes >= 60 && minutes < 120) {
+//         console.log(`Это 1 час и ${minutes - 60} минут`);
+//         return `Это 1 час и ${minutes - 60} минут`;
+//         }
+
+//         if (minutes >= 120 && minutes < 180) {
+//             console.log(`Это 2 часа и ${minutes - 120} минут`);
+//             return `Это 2 часа и ${minutes - 120} минут`;
+//             }
+
+//             if (minutes >= 180 && minutes < 240) {
+//                 console.log(`Это 3 часа и ${minutes - 180} минут`);
+//                 return `Это 3 часа и ${minutes - 180} минут`;
+//                 }
+
+//                 if (minutes >= 240 && minutes < 300) {
+//                     console.log(`Это 4 часа и ${minutes - 240} минут`);
+//                     return `Это 4 часа и ${minutes - 240} минут`;
+//                     }
+
+//                     if (minutes >= 300 && minutes < 360) {
+//                         console.log(`Это 5 часов и ${minutes - 300} минут`);
+//                         return `Это 5 часов и ${minutes - 300} минут`;
+//                         }
+
+//                         if (minutes >= 360 && minutes < 420) {
+//                             console.log(`Это 6 часов и ${minutes - 360} минут`);
+//                             return `Это 6 часов и ${minutes - 360} минут`;
+//                             }
+
+//                             if (minutes >= 420 && minutes < 480) {
+//                                 console.log(`Это 7 часов и ${minutes - 420} минут`);
+//                                 return `Это  часов и ${minutes - 420} минут`;
+//                                 }
+
+//                                 if (minutes >= 480 && minutes < 540) {
+//                                     console.log(`Это 8 часов и ${minutes - 480} минут`);
+//                                     return `Это 8 часов и ${minutes - 480} минут`;
+//                                     }
+
+//                                     if (minutes >= 540 && minutes < 600) {
+//                                         console.log(`Это 9 часов и ${minutes - 540} минут`);
+//                                         return `Это 9 часов и ${minutes - 540} минут`;
+//                                         }
+
+//                                         if (minutes === 600) {
+//                                             console.log(`Это 10 часов`);
+//                                             return `Это 10 часов`;
+//                                             }
+// }
+
+// getTimeFromMinutes(50);
+
+
+
+// function findMaxNumber(a, b, c, d) {
+//     if (typeof(a) !== "number" || typeof(b) !== "number" || typeof(c) !== "number" || typeof(d) !== "number") {
+//         console.log(0);
+//         return 0;
+//     }
+
+//     if (a > b && a > c && a > d) {
+//         console.log(a);
+//         return a;
+//     }
+
+//     if (b > a && b > c && b > d) {
+//         console.log(b);
+//         return b;
+//     }
+
+//     if (c > a && c > b && c > d) {
+//         console.log(c);
+//         return c;
+//     }
+    
+//     if (d > a && d > b && d > c) {
+//         console.log(d);
+//         return d;
+//     }
+// }
+
+// findMaxNumber(1, 5, "6.6", 11);
+
+
+
+
+
+// function getTimeFromMinutes(minutesTotal) {
+
+//     const hours = Math.floor(minutesTotal / 60);
+//     const minutes = minutesTotal % 60;
+
+//     let hoursStr = "";
+
+//     switch (hours) {
+//         case 0: 
+//             hoursStr = "часов";
+//             break; 
+
+//         case 1:
+//             hoursStr = "час";
+//             break;
+
+//         case 2: 
+//         case 3:
+//         case 4:
+//             hoursStr = "часа";
+//             break;
+//         default:
+//             hoursStr = "часов";
+//             break;
+//     }
+
+//     console.log(`Это ${hours} ${hoursStr} и ${minutes} минут`);
+//     return `Это ${hours} ${hoursStr} и ${minutes} минут`;
+// }
+
+// getTimeFromMinutes(100);
+
+
+
+
+
+// function fib(step) {
+//     if (typeof(step) !== "number" || step <= 0 || step % 1 !== 0) {
+//         return "";
+//     }
+
+//     const arr = [0];
+
+//     for (let i = 1; i < step; i++) {
+//         if (i === 1) {
+//         arr.push(1);
+//         } else {
+//             arr.push(arr[i - 2] + arr[i - 1]);
+//         }
+//     }
+
+//     console.log(arr);
+//     return arr.join("");
+// }
+
+// fib(10);
