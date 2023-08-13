@@ -853,3 +853,432 @@
 // }
 
 // fib(10);
+
+
+
+// const options = {
+//     name: "qwer",
+//     width: 1024,
+//     color: {
+//         bg: "ReadableByteStreamController",
+//         border: "black",
+//     },
+//     makeTest: function() {
+//         console.log("Test");
+//     }
+// };
+
+// options.makeTest();
+
+// console.log(Object.keys(options).length);
+
+
+
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+
+// arr.pop();
+// arr.push(2, 4);
+
+// console.log(arr);
+
+
+// function copy(mainObj) {
+//     let objCopy = {};
+
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+
+//     return objCopy;
+// }
+
+
+
+
+
+// function copy(mainObj) {
+//     let objCopy = {};
+
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+
+//     return objCopy;
+// }
+
+
+// const num = {
+//     a: 2,
+//     b: 4,
+//     c: {
+//         x: 5,
+//         d: 7
+//     }
+// };
+
+
+// copy(num);
+// const newNum = copy(num);
+
+// newNum.a = 10;
+
+// console.log(newNum);
+//  console.log(num);
+
+
+// const add = {
+//     j: 13,
+//     g: 21
+// };
+
+// const clone = Object.assign({}, add);
+
+// clone.j = 25;
+
+
+// console.log(add);
+// console.log(clone);
+
+
+
+
+
+
+// const oldArr = ["a", "b", "c"];
+
+// const newArr = oldArr.slice();
+
+// newArr[2] = "adsfgsdg";
+
+// console.log(newArr);
+// console.log(oldArr);
+
+
+
+
+
+
+
+
+// const video = ["a", "b", "c"],
+//       blogs = ["w", "n", "l"],
+//       internet = [...video, ...blogs, "ooo"];
+
+// console.log(internet);
+  
+
+// const array = ["a", "b"];
+
+// const newAarray = [...array];
+
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+
+// const newObj = {...q};
+
+
+
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     }
+// };
+
+
+// function showExperience(plan) {
+
+//     const {exp} = plan.skills;
+//     console.log(exp);
+//     return exp;
+// }
+
+// showExperience(personalPlanPeter);
+
+
+
+
+
+
+
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%',
+//             ruby: '30%'
+//         },
+//         exp: '1 month'
+//     }
+// };
+
+// function showProgrammingLangs(plan) {
+//     let a = "";
+
+//     const {programmingLangs} = plan.skills;
+
+//     for (let key in programmingLangs) {
+
+//         a += `Язык ${key} изучен на ${programmingLangs[key]}\n`;
+
+//         console.log(`Язык ${key} изучен на ${programmingLangs[key]}\n`);
+//     }
+
+//     return a;
+// }
+
+// showProgrammingLangs(personalPlanPeter);
+
+
+// function showProgrammingLangs(plan) {
+//     let str = '';
+//     const {programmingLangs} = plan.skills;
+//     for (let key in programmingLangs) {
+//         str += `Язык ${key} изучен на ${programmingLangs[key]}\n`
+//     }
+
+//     return str;
+// }
+
+// showProgrammingLangs(personalPlanPeter);
+
+
+
+
+
+
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%',
+//             ruby: '30%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function(plan) {
+//     const {age} = plan;
+//     const {languages} = plan.skills;
+
+//     let str = `Мне ${age} лет и я владею языками: `;
+
+//         languages.forEach(function(aaa) {
+//         str += `${aaa.toUpperCase()}`;
+//         });
+//         console.log(str);
+//         return str;
+//     }
+// };
+
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+
+
+
+
+
+
+//     console.log(`Мне ${a} лет и я владею языками: ${b.toUpperCase()}`);
+// }
+
+
+// const {age} = personalPlanPeter;
+// const {languages} = personalPlanPeter.skills;
+// showAgeAndLangs(age, languages);
+
+
+
+
+
+// showAgeAndLangs: function(plan) {
+//     const {age} = plan;
+//     const {languages} = plan.skills;
+//     let str = `Мне ${age} и я владею языками: `;
+
+//     languages.forEach(function(lang) {
+//         str += `${lang.toUpperCase()} `;
+//     });
+        
+//     return str;
+// }
+// };
+
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+
+
+
+
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     let name = "";
+//     for (let i = 0; i < 4; i++) {
+//         name += `${arr[i]} `;
+//     }
+//     console.log(`Семья состоит из: ${name} `);
+// }
+
+// showFamily(family);
+
+// showFamily(family)  => 'Семья состоит из: Peter Ann Alex Linda'
+
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     let name = "";
+//     if (arr.length == 0) {
+//         console.log("Семья пуста");
+//         return "Семья пуста";
+//     } else {
+//         for (let i = 0; i < family.length; i++) {
+//             name += `${arr[i]} `;
+//         }
+//     console.log(`Семья состоит из: ${name} `);
+//     return `Семья состоит из: ${name} `;
+//     }
+// }
+
+// showFamily(family);
+
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//     for (let i in arr) {
+//     console.log(`${arr[i].toLowerCase()}`);
+//     }
+// }
+
+// standardizeStrings(favoriteCities);
+
+
+
+// const someString = 'This is some strange string';
+
+// function reversed(str) {
+//     if (typeof(str) !== "string") {
+//         console.log("Ошибка!");
+//         return "Ошибка!";
+//     }
+//     const arr = [];
+
+//     for (let i in str) {
+//         arr[i] = str[i];
+//     }
+    
+//     let revArr = [];
+//     revArr = arr.reverse().join("");
+//     console.log(revArr);
+//     return revArr;
+// }
+
+// reversed(someString);
+
+
+
+
+// const array1 = ['one', 'two', 'three'];
+// console.log('array1:', array1);
+// Expected output: "array1:" Array ["one", "two", "three"]
+
+// const reversed = array1.reverse();
+// console.log('reversed:', reversed);
+
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+// function availableCurr(arr, missingCurr) {
+//     let str = '';
+
+
+//     for (let i in arr) {
+//         if (arr[i] === missingCurr) {
+//             continue;
+//         }
+//         str += `${arr[i]}\n`;
+//     }
+//     console.log(str);
+//     return str;
+// }
+
+// availableCurr([...baseCurrencies, ...additionalCurrencies], 'USD');
+
+
+
+
+const baseCurrencies = ["USD"];
+const additionalCurrencies = [];
+
+// function availableCurr(arr, missingCurr) {
+//     let str = "";
+
+// arr.length === 0 ? str = "Нет доступных валют" : str = "Доступные валюты:\n";
+
+//     for (let i in arr) {
+//             if (arr[i] === missingCurr) {
+//                continue
+//             }
+//             str += `${arr[i]} \n`
+        
+//     }
+//     console.log(str);
+//     return str;
+// }
+
+// availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY');
+
+
+
+function availableCurr(arr, missingCurr) {
+    let str = '';
+    arr.length === 0 ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
+
+    // arr.forEach(function(curr, i) {
+    //     if (curr !== missingCurr) {
+    //         str += `${curr}\n`;
+    //     }
+    // });
+
+    // // Или
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === missingCurr) {
+            continue;
+        }
+        str += `${arr[i]}\n`;
+    }
+
+    return str;
+}
+
+availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY');
+
+
+
+
+
+
+
+
