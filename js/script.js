@@ -1,23 +1,38 @@
-const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+let number = 5;
 
-function sortStudentsByGroups(arr) {
-    arr.sort();
-    const a = [], b = [], c = [], rest = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (i < 3) {
-            a.push(arr[i]);  
-        } else if (i < 6) {         
-            b.push(arr[i]);
-        } else if (i < 9) {
-            c.push(arr[i]);
-        } else {
-            rest.push(arr[i]);
-        }   
-    }
-
-    console.log(a, b, c, `Оставшиеся студенты: ${rest.length === 0 ? " - " : rest.join(", ") }`);
-    return [a,b,c, `Оставшиеся студенты: ${rest.length === 0 ? '-' : rest.join(', ')}`]
+function logNumber() {
+    console.log(number);
 }
 
-sortStudentsByGroups(students);
+number = 6;
+
+logNumber();
+
+number = 8;
+
+logNumber();
+
+
+function createCounter() {
+    let counter = 0;
+
+    const myFunction = function() {
+        counter = counter + 1;
+        return counter;
+    }
+
+    return myFunction;
+}
+
+const increment = createCounter();
+const c1 = increment();
+const c2 = increment();
+const c3 = increment();
+
+console.log(c1, c2, c3);
+
+
+// let time = '';
+// 0 && 5 > 3 ? time = 'Day' : time = 'Night';
+// console.log(time);
+
