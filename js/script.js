@@ -1,38 +1,95 @@
-let number = 5;
-
-function logNumber() {
-    console.log(number);
-}
-
-number = 6;
-
-logNumber();
-
-number = 8;
-
-logNumber();
+// 	Какое будет выведено значение: 
+// let x = 5; 
+// alert( x++ ); 
+// 5
 
 
-function createCounter() {
-    let counter = 0;
 
-    const myFunction = function() {
-        counter = counter + 1;
-        return counter;
-    }
-
-    return myFunction;
-}
-
-const increment = createCounter();
-const c1 = increment();
-const c2 = increment();
-const c3 = increment();
-
-console.log(c1, c2, c3);
+// 	Чему равно такое выражение: ([] = "")!!!
+// console.log([ ] + false - null + true); 
+// NaN
 
 
-// let time = '';
-// 0 && 5 > 3 ? time = 'Day' : time = 'Night';
-// console.log(time);
+
+// Что выведет этот код: 
+// let y = 1; 
+// let x = y = 2; 
+// alert(x); 
+// 2
+
+
+
+
+// Чему равна сумма 
+// console.log([ ] + 1 + 2);
+// "12"
+
+
+
+
+// Что выведет этот код: [0] - индекс строки
+// alert( "1"[0] );
+// 1
+
+
+
+
+
+// Чему равно.  оператор "&&" - запинается на лжи!!! 
+// console.log(2 && 1 && null && 0 && undefined); 
+// null
+
+
+
+
+
+// Есть ли разница между выражениями?  !! - превращает в boolean!!!
+// console.log(!!( 1 && 2 ) === (1 && 2));
+// да
+
+
+
+
+
+// Что выведет этот код: "||" - запинается на правде!
+//               "3"   
+// alert( null || 2 && 3 || 4 ); 
+// 3
+
+
+
+
+
+
+// Правда ли что a == b ?
+// a = [1, 2, 3]; b = [1, 2, 3]; 
+// нет, это разные хранилищи информации
+
+
+
+
+
+
+// Что выведет этот код: 
+// alert( +"Infinity" ); 
+// Infinity, тип данных - number
+
+
+
+
+
+// Верно ли сравнение: 
+// console.log("Ёжик" < "яблоко");
+// посимвольное сравнение, смотреть в "unicode" 
+
+
+
+
+
+// Чему равно
+// console.log(0 || "" || 2 || undefined || true || falsе);
+// 2
+
+
+
 
