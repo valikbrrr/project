@@ -1,95 +1,60 @@
-// 	Какое будет выведено значение: 
-// let x = 5; 
-// alert( x++ ); 
-// 5
+const restorantData = {
+    menu: [
+        {
+            name: 'Salad Caesar',
+            price: 14
+        },
+        {
+            name: 'Pizza Diavola',
+            price: 9
+        },
+        {
+            name: 'Beefsteak',
+            price: 17
+        },
+        {
+            name: 'Napoleon',
+            price: 7
+        }
+    ],
+    waitors: [
+        {name: 'Alice', age: 22}, {name: 'John', age: 24}
+    ],
+    averageLunchPrice: 20,
+    openNow: true
+};
 
 
 
-// 	Чему равно такое выражение: ([] = "")!!!
-// console.log([ ] + false - null + true); 
-// NaN
+function isOpen(prop) {
+    let answer = '';
+    prop ? answer = 'Открыто' : answer = 'Закрыто';
+    console.log(answer);
+    return answer;
+}
+
+isOpen(restorantData.openNow);
 
 
 
-// Что выведет этот код: 
-// let y = 1; 
-// let x = y = 2; 
-// alert(x); 
-// 2
+function isAverageLunchPriceTrue(fDish, sDish, average) {
+    if (fDish.price + sDish.price < average) {
+        return 'Цена ниже средней';
+    } else {
+        return 'Цена выше средней';
+    }
+}
+
+console.log(isAverageLunchPriceTrue(restorantData.menu[0], restorantData.menu[3], restorantData.averageLunchPrice));
 
 
+function transferWaitors(data) {
+    const copy = Object.assign({}, data);
 
+    copy.waitors = [{name: 'Mike', age: 32}];
+    return copy;
+}
 
-// Чему равна сумма 
-// console.log([ ] + 1 + 2);
-// "12"
-
-
-
-
-// Что выведет этот код: [0] - индекс строки
-// alert( "1"[0] );
-// 1
-
-
-
-
-
-// Чему равно.  оператор "&&" - запинается на лжи!!! 
-// console.log(2 && 1 && null && 0 && undefined); 
-// null
-
-
-
-
-
-// Есть ли разница между выражениями?  !! - превращает в boolean!!!
-// console.log(!!( 1 && 2 ) === (1 && 2));
-// да
-
-
-
-
-
-// Что выведет этот код: "||" - запинается на правде!
-//               "3"   
-// alert( null || 2 && 3 || 4 ); 
-// 3
-
-
-
-
-
-
-// Правда ли что a == b ?
-// a = [1, 2, 3]; b = [1, 2, 3]; 
-// нет, это разные хранилищи информации
-
-
-
-
-
-
-// Что выведет этот код: 
-// alert( +"Infinity" ); 
-// Infinity, тип данных - number
-
-
-
-
-
-// Верно ли сравнение: 
-// console.log("Ёжик" < "яблоко");
-// посимвольное сравнение, смотреть в "unicode" 
-
-
-
-
-
-// Чему равно
-// console.log(0 || "" || 2 || undefined || true || falsе);
-// 2
-
-
+transferWaitors(restorantData);
 
 
